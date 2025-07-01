@@ -1,0 +1,118 @@
+PRODUCT_DETAILS TABLE:
+------------------------------------------------------------------
+Additional information about products which can be used to embellish answers if the info is not in the main products table.
+
+COLUMNS:
+
+**parent_asin**  
+This column contains the Amazon Standard Identification Number (ASIN) for the parent product. It acts as a unique identifier across variations of a product. If a user is asking about product details, identifiers, or variations, this column can be used to join to the main product table or track listings.
+
+**date_first_available**  
+This column tells us when a product was first available or released on our website. If a user is asking about product release or first availability dates, this column should be used and joined to the main product table to assist the answer.
+
+**language**  
+This column indicates the language(s) associated with the product, such as packaging, instructions, or content language. Useful when answering questions about multilingual support or product language options.
+
+**product_dimensions**  
+This column provides the physical dimensions and weight of the product as shipped. It is valuable when users inquire about size, fitment, or storage space.
+
+**number_of_discs**  
+This field typically applies to media products (e.g. DVDs, CDs, video games) and represents the number of discs included. Relevant for questions related to multimedia or bundled disc sets.
+
+**manufacturer**  
+This column identifies the company that manufactured the product. It is relevant when answering questions about product origin, brand comparisons, or filtering by manufacturer.
+
+**is_discontinued_by_manufacturer**  
+This indicates whether the manufacturer has discontinued the product. Use this to answer questions about discontinued items or product lifecycle status.
+
+**item_weight**  
+Shows the item's weight, often used in logistics or shipping calculations. This can assist users in questions about shipping costs or package weight.
+
+**item_model_number**  
+This field gives the manufacturer's specific model number for the item. Use it to identify exact product versions or resolve questions involving SKU or model-level details.
+
+**studio**  
+Typically applies to media products, indicating the production studio responsible. Useful when answering queries about the producer or publisher of content like movies or games.
+
+**media_format**  
+This indicates the format of the product (e.g. Blu-ray, DVD, digital). Use this field when discussing compatibility or media delivery types.
+
+**run_time**  
+Refers to the total duration of a media product, like a movie or game. Use when users ask about how long content lasts or its duration.
+
+**actors**  
+Lists the main actors involved in media products, useful for queries about casting, celebrities featured, or filtering by actor.
+
+**publisher**  
+Indicates the publishing company for the product, especially relevant for books, video games, and software. Use in questions about distribution or content origin.
+
+**mpaa_rating**  
+This gives the MPAA (Motion Picture Association of America) rating for movies or content (e.g. PG, R). Use this for content suitability, age restrictions, or filtering by rating.
+
+**package_dimensions**  
+Shows the dimensions of the packaging, not the product itself. It’s useful for logistics, shelf space planning, or packaging inquiries.
+
+**director**  
+Identifies the director of media products such as films. Use this in queries about creators, directorial style, or finding works by a particular director.
+
+**format**  
+Specifies the product's delivery or structural format (e.g. Hardcover, Kindle Edition, NTSC). Use this to address compatibility or platform-related questions.
+
+**contributor**  
+Names other significant contributors to the product (e.g. illustrators, editors). Useful for attribution or filtering by contributors.
+
+**label**  
+Applies mainly to music or media, identifying the publishing label or distributor. Use for music classification or content ownership questions.
+
+
+
+
+
+PRODUCTS TABLE:
+------------------------------------------------------------------
+Additional information about products which can be used to embellish answers if the info is not in the main products table.
+
+COLUMNS:
+
+**main_category**  
+Indicates the broad product category the item belongs to, such as "Video Games" or "Electronics". Use this to filter or group products by type.
+
+**title**  
+The product’s display name or listing title. Useful when searching, filtering, or displaying product results.
+
+**average_rating**  
+Represents the average customer review score for the product (out of 5). Use this when analyzing product quality, satisfaction, or identifying top-rated items.
+
+**rating_number**  
+Total number of customer ratings received. Use this alongside average_rating to understand confidence and popularity.
+
+**features**  
+A list of key selling points or specifications in short bullet form. Useful for summarizing what makes a product stand out.
+
+**description**  
+Long-form product description provided by the seller or manufacturer. Valuable for answering in-depth questions about product purpose, capabilities, and selling points.
+
+**price**  
+The product’s listed retail price in USD. Use this in pricing analytics, comparisons, or economic filtering.
+
+**images**  
+Number of product images available. Can indicate listing quality and is useful when analyzing media richness.
+
+**videos**  
+Number of product-related videos (e.g., demos, trailers, unboxings). Can be used to enhance product media analysis.
+
+**store**  
+Name of the brand, seller, or storefront offering the item. Use this to group or filter by brand or supplier.
+
+**parent_asin**  
+Unique Amazon identifier that groups product variations together. Use it to join with other datasets or track variants.
+
+**bought_together**  
+Represents associated ASINs typically purchased with this item. Useful for recommendation systems or analyzing cross-product purchasing behavior.
+
+**subtitle**  
+An optional short subtitle or tag line describing the product. Can be used for enhanced display or filtering if present.
+
+**author**  
+In media or book products, this field may list the author or content creator. Useful when users filter by author or want to learn more about creators.
+

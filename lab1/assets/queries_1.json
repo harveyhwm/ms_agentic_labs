@@ -1,0 +1,3 @@
+{
+  "When was the PlayStation 5 first available?": "SELECT pd.date_first_available FROM dbo.product_details pd JOIN dbo.products p ON pd.parent_asin = p.parent_asin WHERE LOWER(p.title) LIKE '%playstation%' AND LOWER(p.title) LIKE '%5%';"
+}

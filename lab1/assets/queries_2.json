@@ -1,0 +1,4 @@
+{
+  "Which warehouses currently stock tennis balls?": "SELECT w.warehouse_name, i.stock FROM dbo.inventory i JOIN dbo.product_categories pc ON i.parent_asin = pc.parent_asin JOIN dbo.products p ON i.parent_asin = p.parent_asin JOIN dbo.warehouses w ON i.warehouse_id = w.warehouse_id WHERE i.stock > 0 AND (LOWER(pc.subcategory_1) LIKE '%tennis ball%' OR LOWER(p.title) LIKE '%tennis ball%');",
+  "Which warehouses currently have PlayStation 5 in stock?": "SELECT w.warehouse_name, i.stock FROM dbo.inventory i JOIN dbo.product_categories pc ON i.parent_asin = pc.parent_asin JOIN dbo.products p ON i.parent_asin = p.parent_asin JOIN dbo.warehouses w ON i.warehouse_id = w.warehouse_id WHERE i.stock > 0 AND (LOWER(pc.subcategory_1) LIKE '%playstation 5%' OR LOWER(p.title) LIKE '%playstation 5%');"
+}
